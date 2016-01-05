@@ -1,0 +1,203 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    >
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context="com.example.rachel.lermanphonebook.DetailActivityFragment"
+    android:orientation="vertical"
+    android:baselineAligned="false">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rochel Leah"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:id="@+id/tvContactName"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/home"
+        android:id="@+id/text"
+        android:layout_marginTop="25dp"
+        android:textColor="@color/blue"
+        android:textSize="18sp" />
+
+    <LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:weightSum="1"
+        android:padding="5dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="(574)232-2026"
+        android:id="@+id/tvHomePhoneNum"
+        android:gravity="left"
+        android:layout_weight=".95
+           "/>
+
+        <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:id="@+id/ivCallHome"
+        android:gravity="right"
+        android:src="@drawable/ic_phone_receiver2"
+        android:layout_weight="0.05"
+            android:cropToPadding="false"
+            android:baselineAlignBottom="false"
+            android:background="@null"
+            android:onClick="call" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mobile"
+        android:id="@+id/textView"
+        android:textColor="@color/blue"
+        android:textSize="18dp"
+        android:padding="5dp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:padding="5dp"
+        android:baselineAligned="false"
+        android:outlineProvider="bounds">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="(574)343-6316"
+            android:id="@+id/tvCellNum"
+            android:gravity="left"
+            android:layout_weight=".90         "/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:id="@+id/ivCallCell"
+            android:gravity="right"
+            android:src="@drawable/ic_phone_receiver2"
+            android:layout_weight="0.05"
+            android:background="@null"
+            android:onClick="call" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:id="@+id/ivSendMessage"
+            android:src="@drawable/ic_message2"
+            android:layout_weight=".05"
+            android:cropToPadding="false"
+            android:background="@null"
+            android:onClick="sendSMSMessage" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/email"
+        android:id="@+id/text2"
+        android:layout_marginTop="25dp"
+        android:textColor="@color/blue"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:padding="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="rochellpollack"
+            android:id="@+id/tvEmail"
+            android:gravity="left"
+            android:layout_weight=".95
+           "/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:id="@+id/ivEmail"
+            android:gravity="right"
+            android:src="@drawable/ic_mail"
+            android:layout_weight="0.05"
+            android:cropToPadding="false"
+            android:baselineAlignBottom="false"
+            android:background="@null"
+            android:onClick="sendEmail" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/gray"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/home_address"
+        android:id="@+id/text3"
+        android:layout_marginTop="25dp"
+        android:textColor="@color/blue"
+        android:textSize="18sp" />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:weightSum="1"
+        android:padding="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1220 E Woodside \nSouth Bend In, 46614"
+            android:id="@+id/tvAddress"
+            android:gravity="left"
+            android:layout_weight=".95
+           "/>
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:id="@+id/ivDirections"
+            android:gravity="right"
+            android:src="@drawable/ic_map_location2"
+            android:layout_weight="0.05"
+            android:cropToPadding="false"
+            android:baselineAlignBottom="false"
+            android:background="@null" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
+</ScrollView>
